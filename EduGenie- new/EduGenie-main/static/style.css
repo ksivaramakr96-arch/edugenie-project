@@ -1,0 +1,393 @@
+:root {
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #172033;
+    background: #f4f7fb;
+
+    line-height: 1.55;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.shell {
+    width: min(920px, calc(100% - 32px));
+
+    margin: 0 auto;
+
+    padding:
+        48px
+        0
+        28px;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+
+    padding:
+        20px
+        0
+        28px;
+}
+
+.badge {
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    color: #3156c8;
+
+    background: #e8edff;
+
+    border-radius: 999px;
+
+    padding:
+        7px
+        12px;
+}
+
+h1 {
+    font-size:
+        clamp(42px, 8vw, 70px);
+
+    line-height: 1;
+
+    margin:
+        18px
+        0
+        12px;
+
+    letter-spacing: -0.05em;
+}
+
+.hero p {
+    margin:
+        0
+        auto;
+
+    max-width: 650px;
+
+    color: #667085;
+
+    font-size: 18px;
+}
+
+
+/* CARD */
+
+.card {
+    background: #ffffff;
+
+    border:
+        1px
+        solid
+        #e5eaf2;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    box-shadow:
+        0
+        14px
+        40px
+        rgba(25, 42, 70, 0.07);
+
+    margin-top: 18px;
+}
+
+
+/* FORM */
+
+label {
+    display: block;
+
+    font-weight: 750;
+
+    margin:
+        0
+        0
+        8px;
+}
+
+select,
+textarea {
+    width: 100%;
+
+    border:
+        1px
+        solid
+        #d8deea;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: inherit;
+
+    font: inherit;
+
+    padding:
+        12px
+        14px;
+
+    outline: none;
+}
+
+select:focus,
+textarea:focus {
+    border-color: #5672dc;
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        #e9edff;
+}
+
+textarea {
+    margin-top: 18px;
+
+    resize: vertical;
+
+    min-height: 180px;
+}
+
+
+/* BUTTON AREA */
+
+.actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 12px;
+}
+
+#counter {
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+
+button {
+    border: 0;
+
+    border-radius: 11px;
+
+    padding:
+        11px
+        18px;
+
+    background: #3156c8;
+
+    color: white;
+
+    font: inherit;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.96);
+}
+
+button:disabled {
+    opacity: 0.55;
+
+    cursor: wait;
+}
+
+.secondary {
+    background: #eef2f8;
+
+    color: #27334b;
+
+    padding:
+        8px
+        13px;
+}
+
+
+/* RESULT */
+
+.result-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+h2 {
+    margin:
+        0
+        0
+        14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.answer {
+    white-space: pre-wrap;
+}
+
+
+/* QUIZ */
+
+.quiz-question {
+    border:
+        1px
+        solid
+        #e7ebf2;
+
+    border-radius: 14px;
+
+    padding: 16px;
+
+    margin:
+        14px
+        0;
+}
+
+.quiz-question h3 {
+    margin:
+        0
+        0
+        12px;
+
+    font-size: 16px;
+}
+
+.quiz-option {
+    padding:
+        8px
+        0;
+}
+
+.quiz-answer {
+    margin-top: 10px;
+
+    color: #3156c8;
+
+    font-weight: 700;
+}
+
+
+/* LEARNING PATH */
+
+.path-step {
+    border-left:
+        3px
+        solid
+        #3156c8;
+
+    padding:
+        2px
+        0
+        4px
+        16px;
+
+    margin:
+        18px
+        0;
+}
+
+.path-step h3 {
+    margin:
+        0
+        0
+        6px;
+}
+
+
+/* ERROR */
+
+.error {
+    color: #9b1c1c;
+
+    background: #fff0f0;
+
+    border:
+        1px
+        solid
+        #ffcaca;
+
+    padding:
+        12px
+        14px;
+
+    border-radius: 12px;
+
+    margin:
+        18px
+        0;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    color: #98a2b3;
+
+    font-size: 13px;
+
+    margin-top: 24px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .shell {
+        width: min(
+            100% - 20px,
+            920px
+        );
+
+        padding-top: 24px;
+    }
+
+    .card {
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+}

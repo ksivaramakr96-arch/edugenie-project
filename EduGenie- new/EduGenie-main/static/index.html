@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="description"
+        content="EduGenie - AI-powered learning assistant"
+    >
+
+    <title>EduGenie — Learning Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+
+<main class="shell">
+
+    <header class="hero">
+
+        <div class="badge">
+            AI LEARNING ASSISTANT
+        </div>
+
+        <h1>EduGenie</h1>
+
+        <p>
+            Ask questions, understand concepts,
+            practise with quizzes, summarize material,
+            and build personalized learning paths.
+        </p>
+
+    </header>
+
+
+    <section class="card">
+
+        <form id="edu-form">
+
+            <label for="task">
+                Choose a task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Concept
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Text
+                </option>
+
+                <option value="learn/recommendations">
+                    Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="input">
+                Your topic, question, or study material
+            </label>
+
+            <textarea
+                id="input"
+                rows="9"
+                maxlength="20000"
+                placeholder="Example: Explain photosynthesis to a beginner."
+            ></textarea>
+
+
+            <div class="actions">
+
+                <span id="counter">
+                    0 / 20,000
+                </span>
+
+                <button
+                    id="submit"
+                    type="submit"
+                >
+                    Generate
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <p
+        id="error"
+        class="error hidden"
+    ></p>
+
+
+    <section
+        id="result"
+        class="card result hidden"
+    >
+
+        <div class="result-heading">
+
+            <h2>Result</h2>
+
+            <button
+                id="copy"
+                class="secondary"
+                type="button"
+            >
+                Copy
+            </button>
+
+        </div>
+
+        <div id="output"></div>
+
+    </section>
+
+
+    <footer>
+        EduGenie • FastAPI + Google Gemini
+    </footer>
+
+</main>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
